@@ -1,19 +1,41 @@
 
+var {isNotEmpty} = require('./utlis/core');
+function _register(args){
+    this.properties.push()
+}
+
 class emailValidato{
 
     constructor(){
         this.properties = [];
     }
-    hi(){
-        this.properties.push(this.hi())
+    
+    
+    isNotEmpty(){
+        this.properties.push();
     }
 
-    helloHi(){
-        this.properties.forEach(e =>{
-           console.log(e);
-           
-            
-        })
+    minLength(){
+
+    }
+
+    maxLength(){
+
+    }
+
+    isValidEmail(){
+
+    }
+
+    onlyGmail(){
+
+    }
+
+    onlyYahooMail(){
+
+    }
+    onlyHotmail(){
+        
     }
 }
 
