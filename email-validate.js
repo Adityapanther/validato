@@ -21,38 +21,39 @@ class emailValidato{
     
     isNotEmpty(){
         _register.call(this, 'isNotEmpty', '');
-    }
+    };
 
     minLength(length){
         console.log("main");
         
         _register.call(this, 'minLength', length.toString());
-    }
+    };
 
     maxLength(length){
         _register.call(this, 'maxLength', length.toString());
 
-    }
+    };
 
     isValidEmail(){
-        _register.call(this, 'isValidEmail', '')
-    }
+        _register.call(this, 'isValidEmail', '');
+    };
 
     onlyGmail(){
-        _register.call(this, 'onlyGmail');
-    }
+        _register.call(this, 'onlyGmail', '');
+    };
 
     onlyYahooMail(){
-        _register.call(this, 'onlyYahooMAil');
-    }
+        _register.call(this, 'onlyYahooMAil', '');
+    };
+
     onlyHotMail(){
-        _register.call(this, 'onlyHotMail');
-    }
+        _register.call(this, 'onlyHotMail', '');
+    };
 
     validate(emailId){
-        var data = emailId.toString();
+        this.data = emailId;
         return this.properties.every(_validEmail.bind(this));
-    }
+    };
 }
 
 module.exports = emailValidato;

@@ -1,16 +1,13 @@
 module.exports = {
-    isNotEmpty : function isNotEmpty(data){
-        if (data === "" || data === 'undefined') {
-            console.log("not");
-            
-        }else {
-          console.log("yes");
-        }
-        console.log("hello ad!");
-        return false
+    isNotEmpty : function isNotEmpty(){
+     if (this.data === '' || this.data === undefined) {
+         return false
+     }else {
+       return true
+     }
     },
 
-    onlyGmail: function onlyGmail(){
-
+    onlyGmail : function onlyGmail(){
+        
     }
 }
