@@ -1,7 +1,15 @@
 
-var {isNotEmpty} = require('./utlis/core');
-function _register(args){
-    this.properties.push()
+var core = require('./utlis/core');
+
+
+function _register(metd, args){
+    this.properties.push({method: metd, argument: args})
+    return this;
+}
+
+function _validEmail(property){
+    
+    return core[property.method].call(this, property.argument);
 }
 
 class emailValidato{
@@ -12,30 +20,38 @@ class emailValidato{
     
     
     isNotEmpty(){
-        this.properties.push();
+        _register.call(this, 'isNotEmpty', '');
     }
 
-    minLength(){
-
+    minLength(length){
+        console.log("main");
+        
+        _register.call(this, 'minLength', length.toString());
     }
 
-    maxLength(){
+    maxLength(length){
+        _register.call(this, 'maxLength', length.toString());
 
     }
 
     isValidEmail(){
-
+        _register.call(this, 'isValidEmail', '')
     }
 
     onlyGmail(){
-
+        _register.call(this, 'onlyGmail');
     }
 
     onlyYahooMail(){
-
+        _register.call(this, 'onlyYahooMAil');
     }
-    onlyHotmail(){
-        
+    onlyHotMail(){
+        _register.call(this, 'onlyHotMail');
+    }
+
+    validate(emailId){
+        var data = emailId.toString();
+        return this.properties.every(_validEmail.bind(this));
     }
 }
 
