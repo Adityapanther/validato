@@ -2,6 +2,7 @@
 var core = require('./utlis/core');
 
 
+
 function _register(metd, args){
     this.properties.push({method: metd, argument: args})
     return this;
@@ -42,11 +43,11 @@ class emailValidato{
         _register.call(this, 'onlyGmail', '');
     };
 
-    onlyYahooMail(){
+    onlyYahoomail(){
         _register.call(this, 'onlyYahooMAil', '');
     };
 
-    onlyHotMail(){
+    onlyHotmail(){
         _register.call(this, 'onlyHotMail', '');
     };
 
