@@ -1,9 +1,10 @@
 var emailSchema = require('./email-validate');
 const schema =new emailSchema();
 
-schema.isNotEmpty()
-schema.onlyGmail()
-schema.onlyHotmail()
+schema
+.isNotEmpty()
+
+
 
 
 
