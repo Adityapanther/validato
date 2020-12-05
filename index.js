@@ -1,13 +1,8 @@
 var emailSchema = require('./email-validate');
 const schema =new emailSchema();
 
-schema
-.isNotEmpty()
+schema.isValidEmail();
 
 
 
-
-
-console.log(schema.validate("raj68518@hotmail.com"));
-
-
+schema.validate("aditya.kumar.802203@gmail.com")

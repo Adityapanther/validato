@@ -52,7 +52,7 @@ class emailValidato{
     };
 
     validate(emailId){
-        this.data = emailId;
+        this.data = emailId.toString();
         return this.properties.every(_validEmail.bind(this));
     };
 }

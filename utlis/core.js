@@ -11,14 +11,20 @@ module.exports = {
     },
 
     onlyGmail : function onlyGmail(){
-        return  this.data.match(regex.gmail);
+      return regex.gmail.test(this.data)
     },
 
-    onlyHotmail: function onlyHotmail(){
-      return this.data.match(regex.hotmail);
+    onlyHotMail: function onlyHotmail(){
+      return regex.hotmail.test(this.data);
     },
 
-    onlyYahoomail: function onlyYahoomail() {
-      return this.data.match(regex.yahoomail);
+    onlyYahooMail: function onlyYahoomail() {
+      return regex.yahoomail.test(this.data);
+    },
+
+    isValidEmail: function isValidEmail(){
+      console.log(new RegExp('[\w\d.\!\#\$\%\^\&\*\(\)\-\_\=\+\|\{\}\?\`\~ ][\@]gmail.com').exec("aditya.kumar.802203@gmail.com"));
+      console.log(this.data);
+        return regex.email.test(this.data)
     }
 }
