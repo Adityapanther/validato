@@ -1,7 +1,7 @@
 const primaryPattern = "[\w\d\.\!\#\$\%\^\&\*\(\)\-\_\=\+\|\{\}\?\`\~\ ]*";
-const gMailPattern = primaryPattern + "[\@]gmail.com/g";
-const hotMailPattern = primaryPattern + "[\@]hotmail.com/g";
-const yahooMailPattern = primaryPattern + "[\@]yahoomail.com/g";
+const gMailPattern = primaryPattern + "[\@]gmail.com";
+const hotMailPattern = primaryPattern + "[\@]hotmail.com";
+const yahooMailPattern = primaryPattern + "[\@]yahoomail.com";
 const anyEmailPattern = primaryPattern + "[\@]\w{3,20}[\.]\w{2,15}";
 
 module.exports ={

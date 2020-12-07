@@ -23,8 +23,8 @@ module.exports = {
     },
 
     isValidEmail: function isValidEmail(){
-      console.log(new RegExp('[\w\d.\!\#\$\%\^\&\*\(\)\-\_\=\+\|\{\}\?\`\~ ][\@]gmail.com').exec("aditya.kumar.802203@gmail.com"));
-      console.log(this.data);
-        return regex.email.test(this.data)
+      console.log(this.data.match(regex.gmail));
+      
+      return regex.email.test(this.data)
     }
 }
