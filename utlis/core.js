@@ -11,7 +11,7 @@ module.exports = {
     },
 
     onlyGmail : function onlyGmail(){
-      return regex.gmail.test(this.data)
+      return regex.email.test(this.data)
     },
 
     onlyHotMail: function onlyHotmail(){
