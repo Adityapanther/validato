@@ -1,10 +1,10 @@
 var emailSchema = require('./email-validate');
 const schema =new emailSchema();
 
-schema.onlyGmail();
+schema.isValidEmail();
 
 
 
-console.log(schema.validate("raj68518@gmail.com"));
+console.log(schema.validate("@yahoomail.com"));
 
 
