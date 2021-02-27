@@ -11,7 +11,9 @@ module.exports = {
     },
 
     onlyGmail : function onlyGmail(){
-      return regex.gmail.test(this.data)
+      console.log(regex.gmail.test(this.data));
+      
+      return regex.gmail.test(this.data);
     },
 
     onlyHotMail: function onlyHotmail(){
@@ -23,7 +25,7 @@ module.exports = {
     },
 
     isValidEmail: function isValidEmail(){
-      console.log(this.data.match(regex.gmail));
+      console.log(this.data.match(regex.email));
       
       return regex.email.test(this.data);
     }

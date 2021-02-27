@@ -22,33 +22,37 @@ class emailValidato{
     
     isNotEmpty(){
         _register.call(this, 'isNotEmpty', '');
+        return this;
     };
 
     minLength(length){
-        console.log("main");
-        
         _register.call(this, 'minLength', length.toString());
+        return this;
     };
 
     maxLength(length){
         _register.call(this, 'maxLength', length.toString());
-
+        return this;
     };
 
     isValidEmail(){
         _register.call(this, 'isValidEmail', '');
+        return this;
     };
 
     onlyGmail(){
         _register.call(this, 'onlyGmail', '');
+        return this;
     };
 
     onlyYahoomail(){
         _register.call(this, 'onlyYahooMAil', '');
+        return this;
     };
 
     onlyHotmail(){
         _register.call(this, 'onlyHotMail', '');
+        return this;
     };
 
     validate(emailId){
